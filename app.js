@@ -336,7 +336,7 @@ fetch('api/photos').then((r) => { if (!r.ok) throw new Error(); return r.json();
   .then((list) => {
   photos = list.map((src) => ({ src, alt: PHOTO_ALT[decodeURIComponent(src.split('/').pop())] || 'Фото с теннисного кемпа' }));
   if (!photos.length) return document.getElementById('photos').remove();
-  galleryEl.innerHTML = photos.map((p, i) => `<button class="gallery__item" data-i="${i}"><img src="${p.src}" alt="${p.alt}" loading="lazy"></button>`).join('');
+  galleryEl.innerHTML = photos.map((p, i) => `<button class="gallery__item" data-i="${i}"><img src="${p.src}" alt="${p.alt}" decoding="async"></button>`).join('');
 }).catch(() => document.getElementById('photos')?.remove());
 
 function showPhoto(i) {
