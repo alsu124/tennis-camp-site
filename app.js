@@ -40,7 +40,7 @@ const campLabel = (c) => `${loc(c).place} · ${fmtRange(c.start, c.end)} ${c.sta
 
 const TG_CHAT = 'https://t.me/prana_kitchen_worldwide';
 // Воркер Cloudflare: принимает заявки и отдаёт расписание, когда сайт работает без своего сервера (GitHub Pages)
-const WORKER_URL = 'https://tennis-camp-leads.hotlab-leads.workers.dev';
+const WORKER_URL = 'https://tennis-camp-leads.nurutdinovaaalsu.workers.dev';
 let STATIC_MODE = false; // true, если сайт открыт без сервера (например, на GitHub Pages)
 let CAMPS = [];
 let upcoming = [];
