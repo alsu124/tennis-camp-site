@@ -28,7 +28,7 @@ const LOCATIONS = {
     note: 'одноместное размещение +3 000 ₽',
     features: ['Крытый грунтовый корт', '7 ч тренировок + 3 ч ОФП', 'Сауна с бассейном', 'Питание', 'Отель'],
     photos: [],
-    art: 'clay', // заставка «крытый грунт» вместо фото
+    art: 'clay', // текстовая плашка цвета грунта вместо фото
   },
 };
 // ======================================================
@@ -81,7 +81,7 @@ function renderCamps() {
     return `
     <button class="camp ${isSold(c) ? 'is-sold' : ''}" data-apply="${c.id}" style="animation-delay:${i * 50}ms" aria-label="${L.title}, ${fmtRange(c.start, c.end)}">
       <div class="camp__img ${L.art ? 'camp__img--' + L.art : photo ? '' : 'camp__img--winter'}" ${photo && !L.art ? `style="--img:url('${photo}')"` : ''}>
-        ${photo || L.art ? '' : '<span class="snow" aria-hidden="true"></span>'}
+        ${L.art ? `<span class="clay-label"><b>${L.short}</b><i></i><small>${fmtRange(c.start, c.end)} · крытый грунт</small></span>` : photo ? '' : '<span class="snow" aria-hidden="true"></span>'}
         <div class="camp__badges">${badges}</div>
       </div>
       <div class="camp__body">

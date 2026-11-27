@@ -626,16 +626,13 @@ h2 em, .hero__title em, .courts h3 em { font-style: italic; font-weight: 400; co
 .section--dark h2, .courts h2, .courts h3 { color: #fff; }
 .static-msg { width: 100%; margin: 6px 0 18px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); font: 400 13px/1.5 var(--sans); color: var(--ink-2); resize: none; }
 
-/* ============ Мысхако: заставка «крытый грунт» ============ */
-.tile__img--clay, .camp__img--clay, .place__media--clay {
-  background: radial-gradient(120% 90% at 50% 0%, #f3d9b8 0%, rgba(243,217,184,0) 45%),
-              linear-gradient(180deg, #d98a5c 0%, #b8532f 55%, #8c3a1d 100%);
-}
-.tile__img--clay::before, .camp__img--clay::before, .place__media--clay::before {
-  content: ''; position: absolute; left: -10%; right: -10%; top: -55%; height: 100%;
-  border-radius: 0 0 50% 50%; border-bottom: 1.5px solid rgba(255,255,255,.35);
-  background: repeating-linear-gradient(90deg, rgba(255,255,255,.12) 0 1.5px, transparent 1.5px 14%);
-}
+/* ============ Мысхако: текстовая плашка цвета грунта ============ */
+.tile__img--clay, .camp__img--clay, .place__media--clay { background: #b4532f; }
+.clay-label { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; padding: 20px; gap: 6px; }
+.clay-label b { font: 500 clamp(30px, 4vw, 44px)/1.05 var(--display); letter-spacing: -.01em; }
+.clay-label small { font: 600 12px/1.4 var(--sans); letter-spacing: .18em; text-transform: uppercase; opacity: .85; }
+.clay-label i { display: block; width: 36px; height: 1px; background: rgba(255,255,255,.6); margin: 6px 0; }
+.tile .clay-label { justify-content: flex-start; padding-top: 34%; }
 
 /* ============ Мобильная версия ============ */
 .topbar__short { display: none; }
