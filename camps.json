@@ -1,5 +1,13 @@
 [
   {
+    "id": "myskhako-2026-12-04",
+    "loc": "myskhako",
+    "start": "2026-12-04",
+    "end": "2026-12-06",
+    "seats": 7,
+    "taken": 0
+  },
+  {
     "id": "sochi-2027-01-17",
     "loc": "sochi",
     "start": "2027-01-17",
