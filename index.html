@@ -49,7 +49,7 @@
   <symbol id="i-tg" viewBox="0 0 24 24"><path d="M21 4L3 11l6 2.5M21 4l-3 16-6.5-5M21 4L9 13.5v5.5l2.5-4"/></symbol>
 </svg>
 
-<div class="topbar">Набор в группы 2027 открыт · не больше 7 человек в группе · <button class="topbar__link" data-apply>Оставить заявку</button></div>
+<div class="topbar"><span class="topbar__long">Набор в группы 2027 открыт · не больше 7 человек в группе · </span><span class="topbar__short">Набор открыт · до 7 человек · </span><button class="topbar__link" data-apply>Оставить заявку</button></div>
 
 <header class="nav" id="top">
   <div class="container nav__inner">
@@ -73,7 +73,7 @@
   <section class="hero">
     <div class="hero__bg"></div>
     <div class="container hero__inner">
-      <p class="hero__kicker">Теннисные кемпы · Каш · Сочи · Мысхако</p>
+      <p class="hero__kicker">Теннисные кемпы<span class="kicker__places"> · Каш · Сочи · Мысхако</span></p>
       <h1 class="hero__title">Теннис, <em>море</em><br>и горы</h1>
       <p class="hero__lead">Семь дней в маленькой группе: тренировки с видеоразбором, море, путешествия и ужины от нашего шеф-повара</p>
     </div>
@@ -111,7 +111,7 @@
       <span class="tile__cap"><small>Январь</small><b>Сочи, Россия</b><span class="tile__more">Закрытые корты <svg><use href="#i-arrow"/></svg></span></span>
     </a>
     <a class="tile" href="myskhako/">
-      <span class="tile__img" style="--img:url('img/myskhako-card.jpg')"></span>
+      <span class="tile__img tile__img--clay"></span>
       <span class="tile__cap"><small>4–6 декабря</small><b>Мысхако, Новороссийск</b><span class="tile__more">Кемп выходного дня <svg><use href="#i-arrow"/></svg></span></span>
     </a>
   </section>
@@ -257,7 +257,7 @@
           </div>
         </article>
         <article class="place" id="myskhako">
-          <div class="place__media" style="--img:url('img/myskhako-card.jpg')"><span class="place__badge">4–6 декабря</span></div>
+          <div class="place__media place__media--clay"><span class="place__badge">4–6 декабря</span></div>
           <div class="place__body">
             <h3>Мысхако, Новороссийск</h3>
             <p>Теннисный кемп выходного дня: три дня, чтобы прокачать игру, поработать над физической формой и перезагрузиться в хорошей компании. Проходит в любую погоду — тренируемся на крытом грунтовом корте.</p>
@@ -266,8 +266,10 @@
               <li><svg><use href="#i-check"/></svg><span><b>Отдых:</b> сауна с бассейном, море рядом, поход в горы</span></li>
               <li><svg><use href="#i-check"/></svg><span><b>Цена:</b> 27 000 ₽, пара — 48 000 ₽</span></li>
             </ul>
-            <a class="link-btn" href="myskhako/">Подробнее о кемпе <svg><use href="#i-chev"/></svg></a>
-            <button class="link-btn" data-filter-go="myskhako">Записаться <svg><use href="#i-chev"/></svg></button>
+            <div class="place__actions">
+              <button class="btn btn--small" data-filter-go="myskhako">Записаться</button>
+              <a class="link-btn" href="myskhako/">Подробнее о кемпе <svg><use href="#i-chev"/></svg></a>
+            </div>
           </div>
         </article>
       </div>
@@ -342,6 +344,7 @@
           <li><svg><use href="#i-check"/></svg>Группа не больше 7 человек</li>
           <li><svg><use href="#i-check"/></svg>Каш — 120 000 ₽, пара — 230 000 ₽</li>
           <li><svg><use href="#i-check"/></svg>Сочи в январе — закрытые корты</li>
+          <li><svg><use href="#i-check"/></svg>Мысхако, 4–6 декабря — 27 000 ₽</li>
         </ul>
       </div>
       <form class="form" id="applyForm" novalidate></form>

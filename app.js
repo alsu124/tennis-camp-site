@@ -27,7 +27,8 @@ const LOCATIONS = {
     priceOne: 27000, pricePair: 48000,
     note: 'одноместное размещение +3 000 ₽',
     features: ['Крытый грунтовый корт', '7 ч тренировок + 3 ч ОФП', 'Сауна с бассейном', 'Питание', 'Отель'],
-    photos: ['img/myskhako-card.jpg'],
+    photos: [],
+    art: 'clay', // заставка «крытый грунт» вместо фото
   },
 };
 // ======================================================
@@ -79,8 +80,8 @@ function renderCamps() {
     const n = days(c.start, c.end);
     return `
     <button class="camp ${isSold(c) ? 'is-sold' : ''}" data-apply="${c.id}" style="animation-delay:${i * 50}ms" aria-label="${L.title}, ${fmtRange(c.start, c.end)}">
-      <div class="camp__img ${photo ? '' : 'camp__img--winter'}" ${photo ? `style="--img:url('${photo}')"` : ''}>
-        ${photo ? '' : '<span class="snow" aria-hidden="true"></span>'}
+      <div class="camp__img ${L.art ? 'camp__img--' + L.art : photo ? '' : 'camp__img--winter'}" ${photo && !L.art ? `style="--img:url('${photo}')"` : ''}>
+        ${photo || L.art ? '' : '<span class="snow" aria-hidden="true"></span>'}
         <div class="camp__badges">${badges}</div>
       </div>
       <div class="camp__body">
